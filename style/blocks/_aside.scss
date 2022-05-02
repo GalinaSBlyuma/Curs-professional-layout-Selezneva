@@ -1,0 +1,45 @@
+// Преимущества компании - черный блок
+
+
+.aside {
+  background-color: #222224;
+  color: #fff;
+  padding: 104px 0;
+}
+
+.aside-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/*.aside-part {
+  контейнеры для преиуществ. выстраивались флексами
+  }*/
+
+.aside-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.aside-subtitle {
+  margin-top: 28px;
+  margin-bottom: 16px;
+  text-align: center;
+  font-weight: normal;
+  font-size: $main-font-size + 6px;
+  line-height: $main-font-size + 10px;
+  color: #FBFBFB;
+}
+
+.aside-subtitle-px {
+  margin-top: 20px;
+}
+
+.aside-text {
+  font-weight: 300;
+  font-size: $main-font-size;
+  line-height: $main-font-size + 3px;
+  text-align: center;
+  color: #FBFBFB;
+}

@@ -1,0 +1,143 @@
+/* Переменные */
+$main-color: #F16D7F;
+// $second-color: #EF5B70;
+$second-color: $main-color - #02120F;
+$desktop-width: 1140px;
+$main-font-size: 14px;
+
+/* Перимеси */
+@mixin loyalty {
+  font-weight: 300;
+  font-size: $main-font-size + 10px;
+  line-height: $main-font-size + 15px;
+  color: #000000;
+}
+@mixin flexbox ($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin all-button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+@mixin color-button {
+  background-color: $main-color;
+  border: 1px solid $main-color;
+  color: #FFFFFF;
+}
+@mixin white-button {
+  background-color: #FFFFFF;
+  border: 1px solid #A4A4A4;  
+}
+
+@mixin field-hover {
+  border: 1px solid $main-color;
+  color:  #B1B1B1;
+}
+
+@mixin field-focus {
+  border: 1px solid  #B1B1B1;
+  transform: scale(1.1); 
+  box-shadow: 2px 2px 4px $second-color;
+}
+
+
+/* Основная верстка */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Lato', sans-serif;
+  font-size: $main-font-size;
+  line-height: $main-font-size + 3px;
+}
+
+.container {
+  width: $desktop-width;
+  margin: 0 auto;
+}
+
+/* hidden - Скрытый заголовок */
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+/* шапка сайта header */
+
+@import 'blocks/header';
+
+/* promo - розовый блок на главной странице */
+
+@import 'blocks/promo';
+
+/*content - главный блок*/
+
+.content {
+  flex-grow: 1;
+  padding-top: 65px;
+  padding-bottom: 95px;
+}
+
+/*Основной контент на главной странице*/
+/* offter - категории товаров на главной странице */
+@import 'blocks/offter';
+
+/* fetured - карточки популярных товаров */
+@import 'blocks/fetured';
+
+/* Преимущества */
+@import "blocks/aside";
+
+/* Обратная связь */
+@import 'blocks/callback';
+
+/* Подвал */
+@import 'blocks/footer';
+
+/* Промо-мини на всех страницах, кроме главной, розовый блок */
+@import 'blocks/promo-mini';
+
+/* Хлебные крошки */
+@import 'blocks/breadcrumbs';
+
+/* Страница регистрации */
+@import 'blocks/registration';
+
+/* Страница Каталога */ 
+
+/* Сортировка */
+@import 'blocks/selection';
+
+// Выпадающее меню
+
+
+
+// стили для каталога товаров на стр каталога точно такие же как для популярных товаров на главной
+
+/* Пагинация */
+@import 'blocks/pagination';
+
+/* Страница корзины */
+
+// контейнер корзины с карточками товаров
+@import 'blocks/cart-product';
+
+// форма адресса
+@import 'blocks/cart-form';
+
+// Блок с ценой и кнопкой отправки заказа
+@import 'blocks/cart-buy';

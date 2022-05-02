@@ -1,0 +1,59 @@
+// На главной странице. Категории товаров: для женщин, мужчин, детей и аксесуары.
+
+
+.offter {
+  gap: 30px;
+}
+
+.offter-cards {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.offter-card{
+  width: 360px;
+  height: 260px;
+}
+
+.offter-card-link{
+  @include flexbox();   
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+}
+  
+.offter-card-women {
+  background-image: url("../img/offer_1.jpg");
+}
+
+.offter-card-men {
+  background-image: url("../img/offer_2.jpg");
+}
+
+.offter-card-kids {
+  background-image: url("../img/offer_3.jpg");
+}
+ 
+.offter-card-accesories {
+  @include flexbox();
+  width: 1140px;
+  height: 180px;
+  background-image: url("../img/offer_4.jpg");
+}
+
+.offter-text-mini {
+  font-size: $main-font-size + 2px;
+  font-weight: 400;
+  line-height: $main-font-size + 5px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.offter-text-maxi {
+  font-size: $main-font-size + 10px;
+  font-weight: 700;
+  line-height: $main-font-size + 4px;
+  text-align: center;
+  color: $main-color;
+}

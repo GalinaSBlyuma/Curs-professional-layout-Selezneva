@@ -1,0 +1,47 @@
+// Подвальчик:)
+
+
+.footer {
+  background-color: #222224;
+  color: #fff;
+  padding: 24px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-copy {
+  margin: auto 0;
+  font-weight: normal;
+  font-size: $main-font-size + 2px;
+  line-height: $main-font-size + 5px;
+  color: #FBFBFB;
+}
+
+/*ССылки на соцсети*/
+
+.footer-links {
+  display: flex;
+}
+
+.footer-ic-li /*social-item на видео*/ {
+  margin-left: 7px;
+}
+
+.footer-social-link {
+  color: #222;
+  background-color: #fff;
+  width: 32px;
+  height: 32px;
+  @include flexbox();
+  font-size: $main-font-size + 2px;
+  text-decoration: none;
+  @include all-button;
+
+    &:hover{
+      color: #fff;
+      background-color: $main-color;
+    }
+}

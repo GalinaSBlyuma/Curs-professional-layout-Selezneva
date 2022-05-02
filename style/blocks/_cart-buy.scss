@@ -1,0 +1,53 @@
+// Блок с ценой и кнопкой отправки заказа
+
+.cart-buy {
+  width: 360px;
+  height: 214px;
+  background: #F5F3F3;
+  margin-top: 57px;
+  padding-top: 39px;
+  text-align: end;
+}
+
+.cart-buy-sub {
+  padding-right: 34px;
+  margin-bottom: 12px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #4A4A4A;
+}
+
+.cart-buy-grand {
+  padding-right: 37px;
+  margin-bottom: 21px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222;
+}
+
+.cart-buy-line {
+  height: 1px;
+  width: 275px;
+  background-color: #E2E2E2;
+  border: none;
+  margin: 0 auto;
+}
+
+.cart-buy-button-checkout {
+  @include all-button();
+  @include color-button();
+  margin-right: 43px;
+  margin-top: 17px;
+  padding: 15px 42px;
+  font-weight: 300;
+  font-size: $main-font-size + 2px;
+  line-height: $main-font-size + 4px;
+    
+  &:hover {
+    background-color: #FFFFFF;
+    color: $main-color;
+    transform: scale(1.2);
+  }
+}

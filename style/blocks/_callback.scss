@@ -1,0 +1,96 @@
+// Обратная связь
+
+.callback {
+  background-image: url(../img/bg_review.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover ;
+  min-height: 448px;
+  padding-top: 86px;
+}
+
+.callback-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.callback-review {
+  width: 360px ;
+}
+
+.callback-review-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.callback-review-text {
+  margin-top: 30px;
+  text-align: center;
+  font-size: $main-font-size + 6px;
+  line-height: $main-font-size + 10px;
+  color: #222224;
+}
+
+.callback-subscribe {
+  padding-top: 55px;
+  width: 50%;
+}
+
+.callback-subscribe-title {
+  font-weight: 700;
+  font-size: $main-font-size + 10px;
+  line-height: $main-font-size + 26px;
+  text-align: center;
+  color: #222224;
+}
+
+.callback-subscribe-title-mini {
+  font-size: $main-font-size + 4px;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+
+.callback-subscribe-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.callback-subscribe-form-field {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  font-size: $main-font-size;
+  color: #222224;
+  opacity: 0.67;
+  width: 256px;
+  height: 49px;
+  background-color: #E1E1E1;
+  border: 1px solid #E1E1E1;
+  border-radius: 20px 0 0 20px;
+  transition: all 0.3s linear; 
+
+  &:focus {
+    border: 1px solid #222224;
+   transform: scale(1.1); 
+  }
+
+  &:hover {
+    border: 1px solid $main-color;
+  }
+}
+
+.callback-subscribe-form-button {
+  padding: 8px;
+  @include all-button;
+  @include color-button;
+  border-radius: 0 20px 20px 0;
+  font-size: $main-font-size;
+  line-height: $main-font-size + 3px;
+  @include flexbox (flex-start,);
+  
+  &:hover {
+    background-color: $main-color - #111111;
+    transform: scale(1.1); 
+  }
+}

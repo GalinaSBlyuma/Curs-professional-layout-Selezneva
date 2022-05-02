@@ -1,0 +1,144 @@
+// Главный блок у страницы Регистрации
+
+
+.container-registration {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Форма регистрации */
+
+.form-registration-field-name{
+  font-weight: 300;
+  font-size: $main-font-size + 2px;
+  line-height: $main-font-size + 5px;
+  color: #222222;
+  margin-bottom: 20px;
+}
+
+.form-registration-fild {
+  width: 358px;
+  height: 44px;
+  border: 1px solid #A4A4A4;
+  padding: 14px;
+  font-weight: 300;
+  font-size: $main-font-size - 1px;
+  line-height: $main-font-size + 2px;
+  color: #B1B1B1;
+  margin-bottom: 21px;
+  transition: all 0.3s linear;
+
+  &:hover {
+    @include field-hover();
+  }
+  
+  &:focus{
+    @include field-focus();
+  }
+}
+
+.form-male-female {
+  display: flex;
+  margin-bottom: 33px;
+  margin-top: 31px;
+}
+
+.form-registration-radio {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.form-registration-radio-text {
+  @include flexbox(flex-start,);
+  cursor: pointer;
+  margin-right: 20px;
+ 
+}
+ 
+
+.form-registration-radio-text::before {
+  @include flexbox;
+  content: "";
+  width: 17px;
+  height: 17px;
+  padding: 0.2rem;
+  border: 1px solid $main-color;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: all 0.3s linear;
+
+}
+
+.form-registration-radio:checked + .form-registration-radio-text::before {
+  display: flex;
+  font: var(--fa-font-solid);
+  font-size: 15px !important;
+  color: $main-color;
+  content: '\f192';
+}
+
+
+.registration-info-form {
+  max-width: 359px;
+  margin-top: 15px;
+  font-weight: 300;
+  font-size: $main-font-size - 1px;
+  line-height: $main-font-size + 2px;
+  color: #B1B1B1;
+}
+
+.button-registration {
+  @include all-button;
+  @include color-button;
+  margin-top: 39px;
+  padding: 16px 20px 16px 29px;
+  font-weight: 400;
+  font-size: $main-font-size;
+  line-height: $main-font-size + 3px;
+  
+  .arrow-form-registration {
+    margin-left: 20px;
+    color: #fff;
+  }
+
+  &:hover {
+    background: #fff;
+    color: $main-color;
+    transform: scale(1.2);
+
+    .arrow-form-registration {
+      color: $main-color;
+      }
+    // Теперь стрелка меняет цвет вместе с кнопкой! Ура! Я это сделала!))
+  }
+}
+
+
+
+
+/* Лояльность на стр. регистрации */
+
+.title-loyalty {
+  font-weight: 300;
+  font-size: $main-font-size + 10px;
+  line-height: $main-font-size + 15px;
+  color: #000000;
+}
+
+.paragraf-loyalty {
+  margin-top: 22px;
+  max-width: 652px;
+  @include loyalty();
+}
+
+.list-loyalty {
+  margin-top: 21px;
+}
+
+.list-item-loyalty {
+  margin-bottom: 16px;
+  @include loyalty();
+  list-style-position: inside;
+  list-style-image: url('../img/marker.svg');
+}

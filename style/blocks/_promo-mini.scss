@@ -1,0 +1,17 @@
+// Маленький розовый блок. На 2 страница есть еще хлоебные крошки. см. breadcrumbs
+
+.promo-mini-container {
+    @include flexbox(space-between, flex-end);
+}
+.promo-mini {
+  background-color:#F8F3F4;
+  height: 148px;
+}
+
+.promo-mini-pageTite {
+  margin-top: 59px;
+  font-weight: 400;
+  font-size: $main-font-size + 10px;
+  line-height: $main-font-size + 15px;
+  color: $main-color;
+}

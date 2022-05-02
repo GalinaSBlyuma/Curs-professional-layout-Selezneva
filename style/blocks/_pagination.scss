@@ -1,0 +1,57 @@
+// Пагинация на странице каталога
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	margin-top: 48px;
+}
+
+.pagination-list {
+	margin: 0;
+	padding: 12px 15px;
+	list-style: none;
+	display: flex;
+	gap: 15px;	
+	border: 1px solid #EBEBEB;
+  	border-radius: 3px;
+}
+
+.pagination-item--separator {
+	margin: 0 -10px;
+	color: #EBEBEB;
+}
+
+.pagination-link {
+	color: #EBEBEB;
+	border: none;
+	font-weight: 300;
+	font-size: $main-font-size + 2px;
+	line-height: $main-font-size + 5px;
+	background: #fff;
+	@include all-button;
+
+  &:active {
+	color: #EF5B70;
+  }
+
+  &:hover {
+  color: #000;
+  }
+}
+
+.pagination-link-button {
+  fill: #000000;
+  @include all-button;
+
+  &:hover {
+	fill: #EBEBEB;
+  }
+
+  &:active {
+	  fill: #EF5B70;
+  }
+}
+
+.pagination-link-active {
+	color: #EF5B70;
+}

@@ -1,0 +1,51 @@
+// Форма адреса на странице корзины
+
+.cart-form {
+  margin-left: 128px;
+}
+
+.cart-shAdress {
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222;
+}
+
+.cart-shAdress-field {
+  width: 358px;
+  height: 44px;
+  border: 1px solid #A4A4A4;
+  margin-bottom: 21px;
+  padding-left: 16px;
+  font-weight: 300;
+  font-size: $main-font-size - 1px;
+  line-height: $main-font-size + 2px;
+  color: #222222;
+  transition: all 0.3s linear;
+
+  &:hover {
+    @include field-hover();
+  }
+  
+  &:focus{
+    @include field-focus();
+  }
+}
+
+.cart-form-shAdress-button {
+  @include all-button();
+  @include white-button();
+  padding: 10px 15px;
+  text-align: center;
+  font-weight: 300;
+  font-size: $main-font-size - 3px;
+  line-height: $main-font-size - 1px;
+  color: #4A4A4A;
+  
+  &:hover {
+    background-color: $main-color;
+    color: #FFFFFF;
+    transform: scale(1.2);
+  }
+}

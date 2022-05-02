@@ -1,0 +1,54 @@
+// Шапка сайта
+
+.header {
+  background-color: #222222;
+  color: #fff;
+  padding: 19px 0;
+}
+
+.header-container {
+  @include flexbox(space-between,);
+}
+
+.header-left {
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+.header-right {
+  display: flex;
+  gap: 30px;
+}
+
+.header-search, .header-menu {
+  background-color: transparent;
+  border: none;
+  }
+
+ .header-persona svg, .header-basket svg, .header-search svg, .header-menu svg {
+  fill: #E8E8E8;
+  @include all-button
+}
+
+.header-persona:hover svg, .header-basket:hover svg, .header-search:hover svg, .header-menu:hover svg {
+  fill: $main-color;
+}
+
+.header-basket {
+  position: relative;
+}
+
+/*card-number - это для кружлчка с количеством покупок в корзине*/
+.card-number {
+  position: absolute;
+  @include flexbox();
+  top: -10px;
+  right: -10px;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background-color: $main-color;
+  color: #fff;
+  font-size: $main-font-size + 2px;
+}

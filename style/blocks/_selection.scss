@@ -1,0 +1,148 @@
+// Сортировка товаров на странице каталога
+
+.catalog-selection {
+ @include flexbox(space-between,);
+  margin-top: - 28px;
+  margin-bottom: 60px;
+}
+
+.catalog-selection-filter, .catalog-btn-sort {
+  padding-top: 13px;
+  padding-bottom: 5px;
+  display: block;
+  border: none;
+  background-color: #fff;
+  font-size: $main-font-size;
+  line-height: $main-font-size + 3;
+}
+
+
+
+.sort {
+  @include flexbox(flex-start,);
+  width: 65%;
+}
+
+.catalog-btn-sort {
+  font-weight: 400;
+  color: #6F6E6E;
+  @include all-button;
+
+  &:hover {
+    color: #EF5B70;
+    
+    .catalog-arrow-down-svg {
+      fill: #EF5B70;
+    }
+  }
+}
+
+.catalog-arrow-down-svg {
+  margin-left: 10px;
+  margin-right: 28px;
+  fill: #6F6E6E;
+}
+
+
+// Дитейлс
+
+.catalog-selection-filter {
+  text-align: left;
+  width: 360px;
+  padding-left: 16px;
+
+  border: none;
+  background-color: #fff;
+  font-weight: 600;
+  @include all-button;
+
+  &:hover {
+    color: #EF5B70;
+
+    .filer-svg {
+      fill: #EF5B70;
+    }
+  }
+
+  .filer-svg {
+    fill:#000000;
+    margin-left: 11px;
+  }
+}
+
+.catalog-selection-filter-details[open], .catalog-selection-details[open] {
+  color: #ef5b70;
+  .filer-svg {
+      fill: #EF5B70;
+    }
+}
+
+.catalog-selection-details[open] {
+ box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+
+.catalog-selection-details[open] .catalog-selection-filter {
+ background-color: #FFFFFF;
+ position: relative;
+ z-index: 101;
+}
+
+.catalog-selection-details {
+  position: relative;
+}
+
+.catalog-selection-filter-bigbox {
+   position: absolute;
+  z-index: 100;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+
+.catalog-selection-filter-box {
+ 
+ padding: 0 16px;
+  width: 360px;
+  border: 1px solid transparent;
+  background: #FFFFFF;
+  
+}
+
+.catalog-selection-filter-details {
+  color: #6f6e6e;
+  border: 1px solid transparent;
+  margin-bottom: 20px;
+  width: 327px;
+}
+.catalog-selection-filter {
+  display: block;
+ }
+
+.catalog-selection-filter-details::-webkit-details-marker, .catalog-selection-filter::-webkit-details-marker {
+  display: none;
+}
+
+.catalog-selection-filter-summary {
+  display: block;
+  border-left: 10px solid #ef5b70;
+  border-bottom: 1px solid #ebebeb;
+  padding: 10px;
+  outline: none;
+}
+
+.catalog-selection-filter-category-list {
+  display: block;
+  padding-bottom: 11px;
+}
+
+.catalog-selection-filter-summary:hover,
+.catalog-selection-filter-category-button:hover {
+  cursor: pointer;
+  color: #ef5b70;
+}
+
+.catalog-selection-filter-category-button {
+  border: none;
+  background-color: #fff;
+  width: 100%;
+  text-align: left;
+}
+

@@ -1,0 +1,46 @@
+// Промо для главной страницы. Розовый блок.
+
+
+.promo {
+  background-color: #f1e4e6;
+    }
+
+.promo-container {
+  display: flex;
+  justify-content: flex-end;
+  background-image: url("../img/promo_bg.png");
+  background-repeat: no-repeat;
+  background-position-x: -225px;
+  min-height: 765px;
+}
+
+/* promo-rectangle - Розовая фиговинка слева от названия сайта */
+.promo-rectangle {
+  align-self: center;
+  width: 12px;
+  height: 92px;
+  background-color: $main-color;
+}
+
+.promo-title-text {
+  align-self: center;
+  margin-left: 16px;
+}
+
+.promo-title {
+  font-weight: 900;
+  font-size: $main-font-size + 34px;
+  line-height: $main-font-size + 31px;
+  color: #222222;
+}
+
+.promo-title-mini {
+  font-size: $main-font-size + 18px;
+  font-weight: 700;
+  line-height: $main-font-size + 31px;
+  color: #222222
+}
+
+.colortext {
+  color: $main-color ;
+}
