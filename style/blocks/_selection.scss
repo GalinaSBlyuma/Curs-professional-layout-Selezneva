@@ -27,6 +27,7 @@
   font-weight: 400;
   color: #6F6E6E;
   @include all-button;
+  text-transform: uppercase;
 
   &:hover {
     color: #EF5B70;
@@ -98,12 +99,10 @@
 }
 
 .catalog-selection-filter-box {
- 
- padding: 0 16px;
+  padding: 0 16px;
   width: 360px;
   border: 1px solid transparent;
   background: #FFFFFF;
-  
 }
 
 .catalog-selection-filter-details {
@@ -146,3 +145,22 @@
   text-align: left;
 }
 
+// Детали мини-сортировки
+
+.catalog-btn-soprt-details {
+  position: relative;
+}
+
+.catalog-btn-sort-box {
+  position: absolute;
+  padding: 6px 30px 6px 10px;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  font-weight: 400;
+  font-size: $main-font-size;
+  line-height: $main-font-size + 2px;
+  color: #6F6E6E;
+
+}

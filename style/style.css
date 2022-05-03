@@ -900,6 +900,7 @@ body {
   cursor: pointer;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
+  text-transform: uppercase;
 }
 
 .catalog-btn-sort:hover {
@@ -1018,6 +1019,29 @@ body {
   background-color: #fff;
   width: 100%;
   text-align: left;
+}
+
+.catalog-btn-soprt-details {
+  position: relative;
+}
+
+.catalog-btn-sort-box {
+  position: absolute;
+  padding: 6px 30px 6px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #FFFFFF;
+  -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+          box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #6F6E6E;
 }
 
 /* Пагинация */
