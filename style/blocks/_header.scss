@@ -1,6 +1,9 @@
 // Шапка сайта
 
 .header {
+  position: relativ;
+  // позиционировнаие, как родитель для выпадающего меню
+
   background-color: #222222;
   color: #fff;
   padding: 19px 0;
@@ -19,6 +22,14 @@
 .header-right {
   display: flex;
   gap: 30px;
+}
+
+.navlist {
+  list-style-type: none;
+}
+
+.header-menu {
+  padding-top: 3px;
 }
 
 .header-search, .header-menu {
@@ -51,4 +62,86 @@
   background-color: $main-color;
   color: #fff;
   font-size: $main-font-size + 2px;
+}
+
+// Выпадающее меню
+
+/* Коробка с меню */
+.heder-menu-box {
+  // позиционирование для выпадающего меню
+  position: absolute;
+  top: 80px;
+  right: 0px;
+
+  padding-left: 34px;
+  height: 765px;
+  width: 232px;
+  background: #FFFFFF;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+
+// закрытое меню смену классов сделаю потом на JS, когда буду его изучать. Т.к. не поняла, как с помощью кнопки сделать всплывающее меню по клику, а не при наведении.
+.heder-menu-box-close {
+  display: none;
+}
+
+/* Крестик */
+.closebtn {
+    padding-top: 16px;
+    padding-right: 16px;
+    margin-left: 15px;
+    color: #6F6E6E;
+    font-weight: bold;
+    float: right;
+    font-size: 26px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: #F16D7F;
+}
+
+/* заголовок меню */
+
+.heder-hiden-menu {
+  padding-top: 37px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+/* категории в меню */
+
+.heder-big-menu-category {
+  padding-top: 20px;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 17px;
+  color: #F16D7F;
+}
+
+/* ссылки в меню */
+
+.heder-big-menu-category-list {
+  list-style-type: none;
+  margin-top: 11px;
+  margin-left: 21px;
+
+}
+.heder-big-menu-category-link {
+   text-decoration: none;
+   text-transform: capitalize;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 17px;
+   color: #6F6E6E;
+}
+
+.heder-big-menu-category-link:hover {
+  color: #F16D7F;
 }
