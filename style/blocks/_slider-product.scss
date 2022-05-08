@@ -1,0 +1,29 @@
+// Слайдер с картинкой на странице продукта
+
+.product-content-gray {
+    @include flexbox (space-between,);
+    background-color: #F7F7F7;
+    margin-top: -65px;
+}
+
+.product-center-photo {
+    display: flex;
+}
+
+.product-big-img {
+    margin: 0 auto;
+}
+
+.product-slider-btn {
+    padding: 13px 17px;
+    background: rgba(42, 42, 42, 0.15);
+    border: none;
+}
+
+.product-slider-btn:hover .product-slider-arrow {
+    fill: #F16D7F;
+}
+
+.product-slider-arrow {
+    fill: #000;
+}

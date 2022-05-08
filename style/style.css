@@ -1530,4 +1530,43 @@ body {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
+
+/* Страница продукта */
+.product-content-gray {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F7F7F7;
+  margin-top: -65px;
+}
+
+.product-center-photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-big-img {
+  margin: 0 auto;
+}
+
+.product-slider-btn {
+  padding: 13px 17px;
+  background: rgba(42, 42, 42, 0.15);
+  border: none;
+}
+
+.product-slider-btn:hover .product-slider-arrow {
+  fill: #F16D7F;
+}
+
+.product-slider-arrow {
+  fill: #000;
+}
 /*# sourceMappingURL=style.css.map */
