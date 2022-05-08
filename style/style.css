@@ -374,15 +374,76 @@ body {
 }
 
 .fetured-card {
+  position: relative;
   background-color: #F8F8F8;
   width: 360px;
   height: 581px;
 }
 
+.fetured-card:hover .fetured-card-overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fetured-card-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 420px;
+  background: rgba(58, 56, 56, 0.86);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+.fetured-card-btn-add {
+  background: transparent;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+  border: 1px solid #FFFFFF;
+  padding: 10px 14px;
+  vertical-align: middle;
+  font-family: inherit;
+  cursor: pointer;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.fetured-card-btn-add:hover {
+  color: #F16D7F;
+  border-color: #F16D7F;
+}
+
+.fetured-card-btn-add:hover .fetured-card-btn-svg {
+  fill: #F16D7F;
+}
+
+.fetured-card-btn-svg {
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
+  vertical-align: middle;
+  fill: #FFFFFF;
+  margin-right: 7px;
+}
+
 /*заголовок карточки -ссылка!*/
-.fetured-card-titulText {
+.fetured-card-link {
   display: block;
   text-decoration: none;
+}
+
+.fetured-card-titulText {
   margin-left: 18px;
   margin-top: 24px;
   font-weight: normal;
@@ -1024,6 +1085,8 @@ body {
 }
 
 .catalog-selection-filter .filer-svg {
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
   fill: #000000;
   margin-left: 11px;
 }
