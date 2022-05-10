@@ -1,9 +1,12 @@
-// Слайдер с картинкой на странице продукта
+// Слайдер с картинкой на странице продукта и блоком наплывашкой
+
+// Серый блок со слайдером и катинкой
 
 .product-content-gray {
     @include flexbox (space-between,);
     background-color: #F7F7F7;
     margin-top: -65px;
+    padding-bottom: $shift;
 }
 
 .product-center-photo {
@@ -27,3 +30,106 @@
 .product-slider-arrow {
     fill: #000;
 }
+
+// Блок "наплывашка"
+
+.container-product-about-box {
+    background-color: #fff;
+    @include flexbox;
+    flex-direction: column;
+    margin-top: -$shift;
+    margin-bottom: 129px;
+    border: solid 1px #EAEAEA;
+}
+
+// внутри наплывашки
+
+.product-about-box-collection {
+    margin-top: 65px;
+    margin-bottom: 12px;
+    font-weight: 300;
+    font-size: $main-font-size;
+    line-height: $main-font-size + 3px;
+    color: #F16D7F;
+    text-transform: uppercase;
+}
+
+.product-about-box-line-color {
+    background-color: #EF5B70;
+    height: 3px;
+    width: 63px;
+    border: none;
+    margin: 0 auto;
+}
+
+.product-about-box-name-collection {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: $main-font-size + 4px;
+    line-height: $main-font-size + 8px;
+    color: #4D4D4D;
+    margin-top: 12px;
+}
+
+.product-about-box-text {
+    max-width: 555px;
+    margin-top: 48px;
+    font-weight: 300;
+    font-size: $main-font-size;
+    line-height: $main-font-size + 3px;
+    text-align: center;
+    color: #5E5E5E;
+}
+
+.product-about-box-price {
+    margin-top: 32px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #EF5B70;
+}
+
+.product-about-box-line-grey {
+    background-color: #EAEAEA;
+    height: 1px;
+    width: 641px;
+    border: none;
+    margin: 65px auto;
+}
+
+.product-about-box-sorting {
+    margin: 0 auto;
+}
+
+.product-about-box-btn {
+    display: flex;
+    @include all-button;
+    border: 1px solid #FF6A6A;
+    margin-top: 48px;
+    margin-bottom: 65px;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    vertical-align: middle;
+    padding-right: 56px;
+    background-color: #fff;
+    color: #F26376;
+    font-size: $main-font-size + 2px;
+    line-height: $main-font-size + 5px;
+    .product-card-btn-svg {
+        fill: #EF5B70;
+    }
+
+    &:hover {
+        background-color: #F26376;
+        color: #fff;
+        .product-card-btn-svg {
+        fill: #fff;
+        }
+    }
+}
+
+.product-card-btn-svg {
+    margin-left: 23px;
+    margin-right: 22px;
+}
+
