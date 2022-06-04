@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* Переменные */
+/*это для блока наплывания на странице продукта*/
 /* Перимеси */
 /* Основная верстка */
 * {
@@ -39,6 +40,7 @@ body {
 
 /* шапка сайта header */
 .header {
+  position: relativ;
   background-color: #222222;
   color: #fff;
   padding: 19px 0;
@@ -71,6 +73,14 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
+}
+
+.navlist {
+  list-style-type: none;
+}
+
+.header-menu {
+  padding-top: 3px;
 }
 
 .header-search, .header-menu {
@@ -114,6 +124,82 @@ body {
   background-color: #F16D7F;
   color: #fff;
   font-size: 16px;
+}
+
+/* Коробка с меню */
+.heder-menu-box {
+  position: absolute;
+  top: 80px;
+  right: 0px;
+  padding-left: 34px;
+  height: 765px;
+  width: 232px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+          box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+
+.heder-menu-box-close {
+  display: none;
+}
+
+/* Крестик */
+.closebtn {
+  padding-top: 16px;
+  padding-right: 16px;
+  margin-left: 15px;
+  color: #6F6E6E;
+  font-weight: bold;
+  float: right;
+  font-size: 26px;
+  line-height: 20px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: #F16D7F;
+}
+
+/* заголовок меню */
+.heder-hiden-menu {
+  padding-top: 37px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+/* категории в меню */
+.heder-big-menu-category {
+  padding-top: 20px;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 17px;
+  color: #F16D7F;
+}
+
+/* ссылки в меню */
+.heder-big-menu-category-list {
+  list-style-type: none;
+  margin-top: 11px;
+  margin-left: 21px;
+}
+
+.heder-big-menu-category-link {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6F6E6E;
+}
+
+.heder-big-menu-category-link:hover {
+  color: #F16D7F;
 }
 
 /* promo - розовый блок на главной странице */
@@ -289,15 +375,76 @@ body {
 }
 
 .fetured-card {
+  position: relative;
   background-color: #F8F8F8;
   width: 360px;
   height: 581px;
 }
 
+.fetured-card:hover .fetured-card-overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fetured-card-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 420px;
+  background: rgba(58, 56, 56, 0.86);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+.fetured-card-btn-add {
+  background: transparent;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+  border: 1px solid #FFFFFF;
+  padding: 10px 14px;
+  vertical-align: middle;
+  font-family: inherit;
+  cursor: pointer;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.fetured-card-btn-add:hover {
+  color: #F16D7F;
+  border-color: #F16D7F;
+}
+
+.fetured-card-btn-add:hover .fetured-card-btn-svg {
+  fill: #F16D7F;
+}
+
+.fetured-card-btn-svg {
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
+  vertical-align: middle;
+  fill: #FFFFFF;
+  margin-right: 7px;
+}
+
 /*заголовок карточки -ссылка!*/
-.fetured-card-titulText {
+.fetured-card-link {
   display: block;
   text-decoration: none;
+}
+
+.fetured-card-titulText {
   margin-left: 18px;
   margin-top: 24px;
   font-weight: normal;
@@ -890,6 +1037,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.sort-left {
   width: 65%;
 }
 
@@ -939,6 +1089,8 @@ body {
 }
 
 .catalog-selection-filter .filer-svg {
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
   fill: #000000;
   margin-left: 11px;
 }
@@ -1381,5 +1533,161 @@ body {
   color: #F16D7F;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+/* Страница продукта */
+.product-content-gray {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F7F7F7;
+  margin-top: -65px;
+  padding-bottom: 65px;
+}
+
+.product-center-photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-big-img {
+  margin: 0 auto;
+}
+
+.product-slider-btn {
+  padding: 13px 17px;
+  background: rgba(42, 42, 42, 0.15);
+  border: none;
+}
+
+.product-slider-btn:hover .product-slider-arrow {
+  fill: #F16D7F;
+}
+
+.product-slider-arrow {
+  fill: #000;
+}
+
+.container-product-about-box {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: -65px;
+  margin-bottom: 129px;
+  border: solid 1px #EAEAEA;
+}
+
+.product-about-box-collection {
+  margin-top: 65px;
+  margin-bottom: 12px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #F16D7F;
+  text-transform: uppercase;
+}
+
+.product-about-box-line-color {
+  background-color: #EF5B70;
+  height: 3px;
+  width: 63px;
+  border: none;
+  margin: 0 auto;
+}
+
+.product-about-box-name-collection {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  color: #4D4D4D;
+  margin-top: 12px;
+}
+
+.product-about-box-text {
+  max-width: 555px;
+  margin-top: 48px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #5E5E5E;
+}
+
+.product-about-box-price {
+  margin-top: 32px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #EF5B70;
+}
+
+.product-about-box-line-grey {
+  background-color: #EAEAEA;
+  height: 1px;
+  width: 641px;
+  border: none;
+  margin: 65px auto;
+}
+
+.product-about-box-sorting {
+  margin: 0 auto;
+}
+
+.product-about-box-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: inherit;
+  cursor: pointer;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  border: 1px solid #FF6A6A;
+  margin-top: 48px;
+  margin-bottom: 65px;
+  padding-top: 14px;
+  padding-bottom: 10px;
+  vertical-align: middle;
+  padding-right: 56px;
+  background-color: #fff;
+  color: #F26376;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.product-about-box-btn .product-card-btn-svg {
+  fill: #EF5B70;
+}
+
+.product-about-box-btn:hover {
+  background-color: #F26376;
+  color: #fff;
+}
+
+.product-about-box-btn:hover .product-card-btn-svg {
+  fill: #fff;
+}
+
+.product-card-btn-svg {
+  margin-left: 23px;
+  margin-right: 22px;
 }
 /*# sourceMappingURL=style.css.map */

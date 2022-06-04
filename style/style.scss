@@ -4,6 +4,7 @@ $main-color: #F16D7F;
 $second-color: $main-color - #02120F;
 $desktop-width: 1140px;
 $main-font-size: 14px;
+$shift: 65px; /*это для блока наплывания на странице продукта*/
 
 /* Перимеси */
 @mixin loyalty {
@@ -122,7 +123,7 @@ body {
 /* Сортировка */
 @import 'blocks/selection';
 
-// Выпадающее меню
+// Выпадающее меню в хэдере из-за контейнера
 
 
 
@@ -141,3 +142,8 @@ body {
 
 // Блок с ценой и кнопкой отправки заказа
 @import 'blocks/cart-buy';
+
+/* Страница продукта */
+
+// Блок со слайдером и картинкой продукта
+@import 'blocks/slider-product';

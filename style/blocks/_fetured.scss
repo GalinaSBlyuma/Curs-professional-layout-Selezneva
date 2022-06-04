@@ -1,4 +1,4 @@
-// Карточки товаров для полулярного блока на главной странице и, возможно, для каталога
+// Карточки товаров для полулярного блока на главной странице и для каталога
 
 
 .fetured-title {
@@ -20,6 +20,8 @@
   color: #9F9F9F;
 }
 
+// сами карточки
+
 .feturedItems-cards {
   display: flex;
   flex-direction: row;
@@ -28,15 +30,64 @@
 }
 
 .fetured-card {
+  position: relative;
   background-color: #F8F8F8;
   width: 360px;
   height: 581px;
 }
 
+// затемненный слой при наведении
+.fetured-card:hover .fetured-card-overlay {
+  display: flex;
+}
+
+.fetured-card-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 420px;
+  background: rgba(58, 56, 56, 0.86);
+  @include flexbox ();
+  
+  display: none;
+}
+
+.fetured-card-btn-add {
+  background: transparent;
+  font-weight: 400;
+  font-size: $main-font-size ;
+  line-height: $main-font-size + 3px;
+  color: #fff;
+  border: 1px solid #FFFFFF;
+  padding: 10px 14px;
+  vertical-align: middle;
+  @include all-button;
+
+    &:hover {
+      color: $main-color;
+      border-color: $main-color;
+      .fetured-card-btn-svg {
+        fill: $main-color ;
+      }
+    }
+}
+
+.fetured-card-btn-svg {
+  transition: fill 0.3s;
+  vertical-align: middle;
+  fill: #FFFFFF;
+  margin-right: 7px;
+  
+}
+
 /*заголовок карточки -ссылка!*/
-.fetured-card-titulText {
+
+.fetured-card-link {
   display: block;
   text-decoration: none;
+}
+.fetured-card-titulText {
   margin-left: 18px;
   margin-top: 24px;
   font-weight: normal;
