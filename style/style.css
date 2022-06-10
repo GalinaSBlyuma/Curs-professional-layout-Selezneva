@@ -30,6 +30,20 @@ body {
   margin: 0 auto;
 }
 
+@media (max-width: 1200px) {
+  .container {
+    width: 735px;
+  }
+}
+
+@media (max-width: 766px) {
+  .container {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
 /* hidden - Скрытый заголовок */
 .hidden {
   position: absolute;
@@ -217,7 +231,22 @@ body {
   background-image: url("../img/promo_bg.png");
   background-repeat: no-repeat;
   background-position-x: -225px;
-  min-height: 765px;
+  height: 765px;
+}
+
+@media (max-width: 1200px) {
+  .promo-container {
+    background-position: -200px;
+    background-size: contain;
+    min-height: 765px;
+    background-position-y: 100px;
+  }
+}
+
+@media (max-width: 766px) {
+  .promo-container {
+    background-image: none;
+  }
 }
 
 /* promo-rectangle - Розовая фиговинка слева от названия сайта */
@@ -244,11 +273,23 @@ body {
   color: #222222;
 }
 
+@media (max-width: 1200px) {
+  .promo-title {
+    font-size: 38px;
+  }
+}
+
 .promo-title-mini {
   font-size: 32px;
   font-weight: 700;
   line-height: 45px;
   color: #222222;
+}
+
+@media (max-width: 1200px) {
+  .promo-title-mini {
+    font-size: 25px;
+  }
 }
 
 .colortext {
@@ -278,9 +319,41 @@ body {
   margin-bottom: 30px;
 }
 
+@media (max-width: 1200px) {
+  .offter-cards {
+    gap: 19px;
+  }
+}
+
+@media (max-width: 766px) {
+  .offter-cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 16px;
+  }
+}
+
 .offter-card {
   width: 360px;
   height: 260px;
+}
+
+@media (max-width: 1200px) {
+  .offter-card {
+    width: 232px;
+    height: 167px;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 766px) {
+  .offter-card {
+    width: 343px;
+    height: 247px;
+    background-size: contain;
+  }
 }
 
 .offter-card-link {
@@ -323,6 +396,22 @@ body {
   width: 1140px;
   height: 180px;
   background-image: url("../img/offer_4.jpg");
+}
+
+@media (max-width: 1200px) {
+  .offter-card-accesories {
+    width: 734px;
+    height: 116px;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 766px) {
+  .offter-card-accesories {
+    width: 343px;
+    height: 111px;
+    background-size: contain;
+  }
 }
 
 .offter-text-mini {
@@ -372,6 +461,23 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
+}
+
+@media (max-width: 1200px) {
+  .feturedItems-cards {
+    row-gap: 16px;
+    -webkit-column-gap: normal;
+            column-gap: normal;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (max-width: 766px) {
+  .feturedItems-cards {
+    gap: 8px;
+  }
 }
 
 .fetured-card {

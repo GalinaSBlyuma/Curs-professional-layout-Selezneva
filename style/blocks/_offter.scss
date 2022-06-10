@@ -9,11 +9,36 @@
   display: flex;
   gap: 30px;
   margin-bottom: 30px;
+
+  // Планшет 
+  @media (max-width: $tablet-breakpoint) {
+    gap: 19px;
+  }
+
+  @media (max-width: $mobail-breakpoint) {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 
 .offter-card{
   width: 360px;
   height: 260px;
+
+  // Планшет 
+  @media (max-width: $tablet-breakpoint) {
+    width: 232px;
+    height: 167px;
+    background-size: contain;
+    
+  } 
+  
+  //смартфон 
+  @media (max-width: $mobail-breakpoint) {
+    width: 343px;
+    height: 247px;
+    background-size: contain;
+  }
 }
 
 .offter-card-link{
@@ -40,6 +65,20 @@
   width: 1140px;
   height: 180px;
   background-image: url("../img/offer_4.jpg");
+
+  // Планшет 
+  @media (max-width: $tablet-breakpoint) {
+    width: 734px;
+    height: 116px;
+    background-size: contain;
+  } 
+  
+  //смартфон 
+  @media (max-width: $mobail-breakpoint) {
+      width: 343px;
+      height: 111px;
+      background-size: contain;
+  }
 }
 
 .offter-text-mini {

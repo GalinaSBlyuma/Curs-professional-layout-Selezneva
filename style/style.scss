@@ -3,6 +3,8 @@ $main-color: #F16D7F;
 // $second-color: #EF5B70;
 $second-color: $main-color - #02120F;
 $desktop-width: 1140px;
+$tablet-breakpoint: 1200px;
+$mobail-breakpoint: 766px;
 $main-font-size: 14px;
 $shift: 65px; /*это для блока наплывания на странице продукта*/
 
@@ -66,7 +68,24 @@ body {
 .container {
   width: $desktop-width;
   margin: 0 auto;
+
+  // Планшет 
+  @media (max-width: $tablet-breakpoint) {
+    width: 735px;
+    // padding-left: 16px;
+    // padding-right: 16px;
+  } 
+  
+  //смартфон 
+  @media (max-width: $mobail-breakpoint) {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
+
+
+
 
 /* hidden - Скрытый заголовок */
 

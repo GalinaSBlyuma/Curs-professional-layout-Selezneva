@@ -11,7 +11,18 @@
   background-image: url("../img/promo_bg.png");
   background-repeat: no-repeat;
   background-position-x: -225px;
-  min-height: 765px;
+  height: 765px;
+
+  @media (max-width: $tablet-breakpoint) {
+    background-position: -200px;
+    background-size: contain;
+    min-height: 765px;
+    background-position-y: 100px;
+  }
+
+  @media (max-width: $mobail-breakpoint) {
+    background-image: none;
+  }
 }
 
 /* promo-rectangle - Розовая фиговинка слева от названия сайта */
@@ -32,13 +43,22 @@
   font-size: $main-font-size + 34px;
   line-height: $main-font-size + 31px;
   color: #222222;
+
+  @media (max-width: $tablet-breakpoint) {
+    font-size: $main-font-size + 24px;
+  }
 }
 
 .promo-title-mini {
   font-size: $main-font-size + 18px;
   font-weight: 700;
   line-height: $main-font-size + 31px;
-  color: #222222
+  color: #222222;
+
+  @media (max-width: $tablet-breakpoint) {
+    font-size: $main-font-size + 11px;
+  }
+  
 }
 
 .colortext {

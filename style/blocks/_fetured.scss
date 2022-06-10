@@ -27,6 +27,16 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 30px;
+  
+  @media (max-width: $tablet-breakpoint) {
+    row-gap: 16px;
+    column-gap: normal;
+    justify-content: space-between;
+  }
+
+  @media (max-width: $mobail-breakpoint) {
+    gap: 8px;
+  }
 }
 
 .fetured-card {
