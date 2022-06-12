@@ -36,11 +36,9 @@ body {
   }
 }
 
-@media (max-width: 766px) {
+@media (max-width: 767px) {
   .container {
-    width: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
+    width: 360px;
   }
 }
 
@@ -231,21 +229,21 @@ body {
   background-image: url("../img/promo_bg.png");
   background-repeat: no-repeat;
   background-position-x: -225px;
-  height: 765px;
+  min-height: 765px;
 }
 
 @media (max-width: 1200px) {
   .promo-container {
-    background-position: -200px;
+    background-position: 0 0;
     background-size: contain;
-    min-height: 765px;
-    background-position-y: 100px;
+    min-height: 300px;
   }
 }
 
-@media (max-width: 766px) {
+@media (max-width: 767px) {
   .promo-container {
     background-image: none;
+    margin: 0 auto;
   }
 }
 
@@ -266,6 +264,12 @@ body {
   margin-left: 16px;
 }
 
+@media (max-width: 1200px) {
+  .promo-title-text {
+    margin-right: 18px;
+  }
+}
+
 .promo-title {
   font-weight: 900;
   font-size: 48px;
@@ -274,6 +278,12 @@ body {
 }
 
 @media (max-width: 1200px) {
+  .promo-title {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 767px) {
   .promo-title {
     font-size: 38px;
   }
@@ -288,7 +298,13 @@ body {
 
 @media (max-width: 1200px) {
   .promo-title-mini {
-    font-size: 25px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .promo-title-mini {
+    font-size: 20px;
   }
 }
 
@@ -303,6 +319,20 @@ body {
           flex-grow: 1;
   padding-top: 65px;
   padding-bottom: 95px;
+}
+
+@media (max-width: 1200px) {
+  .content {
+    padding-top: 20px;
+    padding-bottom: 65px;
+  }
+}
+
+@media (max-width: 767px) {
+  .content {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
 }
 
 /*Основной контент на главной странице*/
@@ -322,10 +352,11 @@ body {
 @media (max-width: 1200px) {
   .offter-cards {
     gap: 19px;
+    margin-bottom: 19px;
   }
 }
 
-@media (max-width: 766px) {
+@media (max-width: 767px) {
   .offter-cards {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -348,7 +379,7 @@ body {
   }
 }
 
-@media (max-width: 766px) {
+@media (max-width: 767px) {
   .offter-card {
     width: 343px;
     height: 247px;
@@ -406,7 +437,7 @@ body {
   }
 }
 
-@media (max-width: 766px) {
+@media (max-width: 767px) {
   .offter-card-accesories {
     width: 343px;
     height: 111px;
@@ -440,6 +471,18 @@ body {
   color: #222222;
 }
 
+@media (max-width: 1200px) {
+  .fetured-title {
+    margin-top: 155px;
+  }
+}
+
+@media (max-width: 767px) {
+  .fetured-title {
+    margin-top: 64px;
+  }
+}
+
 .fetured-text {
   margin-top: 6px;
   margin-bottom: 48px;
@@ -448,6 +491,20 @@ body {
   font-size: 14px;
   line-height: 17px;
   color: #9F9F9F;
+}
+
+@media (max-width: 1200px) {
+  .fetured-text {
+    margin-top: 3px;
+    margin-bottom: 72px;
+  }
+}
+
+@media (max-width: 767px) {
+  .fetured-text {
+    margin-top: 3px;
+    margin-bottom: 65px;
+  }
 }
 
 .feturedItems-cards {
@@ -474,7 +531,7 @@ body {
   }
 }
 
-@media (max-width: 766px) {
+@media (max-width: 767px) {
   .feturedItems-cards {
     gap: 8px;
   }
@@ -485,6 +542,13 @@ body {
   background-color: #F8F8F8;
   width: 360px;
   height: 581px;
+}
+
+@media (max-width: 767px) {
+  .fetured-card {
+    width: 359px;
+    height: 580px;
+  }
 }
 
 .fetured-card:hover .fetured-card-overlay {
@@ -625,11 +689,37 @@ body {
           transform: rotate(360deg);
 }
 
+@media (max-width: 1200px) {
+  .fetured-allProduct {
+    margin-top: 33px;
+  }
+}
+
+@media (max-width: 767px) {
+  .fetured-allProduct {
+    margin-top: 41px;
+  }
+}
+
 /* Преимущества */
 .aside {
   background-color: #222224;
   color: #fff;
   padding: 104px 0;
+}
+
+@media (max-width: 1200px) {
+  .aside {
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
+}
+
+@media (max-width: 767px) {
+  .aside {
+    padding-top: 48px;
+    padding-bottom: 81px;
+  }
 }
 
 .aside-flex {
@@ -856,6 +946,12 @@ body {
 .footer-social-link:hover {
   color: #fff;
   background-color: #F16D7F;
+}
+
+@media (max-width: 767px) {
+  .navlist-none-mob {
+    display: none;
+  }
 }
 
 /* Промо-мини на всех страницах, кроме главной, розовый блок */

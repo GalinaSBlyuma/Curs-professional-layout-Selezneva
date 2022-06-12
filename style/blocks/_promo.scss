@@ -11,17 +11,17 @@
   background-image: url("../img/promo_bg.png");
   background-repeat: no-repeat;
   background-position-x: -225px;
-  height: 765px;
+  min-height: 765px;
 
   @media (max-width: $tablet-breakpoint) {
-    background-position: -200px;
+    background-position: 0 0;
     background-size: contain;
-    min-height: 765px;
-    background-position-y: 100px;
+    min-height: 300px;
   }
 
   @media (max-width: $mobail-breakpoint) {
     background-image: none;
+    margin: 0 auto;
   }
 }
 
@@ -36,6 +36,12 @@
 .promo-title-text {
   align-self: center;
   margin-left: 16px;
+
+  @media (max-width: $tablet-breakpoint) {
+    margin-right: 18px;
+  }
+
+  
 }
 
 .promo-title {
@@ -45,8 +51,13 @@
   color: #222222;
 
   @media (max-width: $tablet-breakpoint) {
+    font-size: $main-font-size + 20px;
+  }
+
+   @media (max-width: $mobail-breakpoint) {
     font-size: $main-font-size + 24px;
   }
+
 }
 
 .promo-title-mini {
@@ -56,9 +67,12 @@
   color: #222222;
 
   @media (max-width: $tablet-breakpoint) {
-    font-size: $main-font-size + 11px;
+    font-size: $main-font-size + 10px;
   }
   
+   @media (max-width: $mobail-breakpoint) {
+    font-size: $main-font-size + 6px;
+  }
 }
 
 .colortext {

@@ -45,3 +45,9 @@
       background-color: $main-color;
     }
 }
+
+@media (max-width: $mobail-breakpoint) {
+   .navlist-none-mob {
+      display: none;
+  }
+}

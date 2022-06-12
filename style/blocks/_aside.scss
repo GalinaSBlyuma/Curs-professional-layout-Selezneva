@@ -5,12 +5,30 @@
   background-color: #222224;
   color: #fff;
   padding: 104px 0;
+
+   @media (max-width: $tablet-breakpoint) {
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
+
+   @media (max-width: $mobail-breakpoint) {
+    padding-top: 48px;
+    padding-bottom: 81px;
+  }
 }
 
 .aside-flex {
   display: flex;
   justify-content: space-between;
   gap: 30px;
+
+   @media (max-width: $tablet-breakpoint) {
+   
+  }
+
+   @media (max-width: $mobail-breakpoint) {
+    
+  }
 }
 
 /*.aside-part {
