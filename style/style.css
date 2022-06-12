@@ -214,6 +214,12 @@ body {
   color: #F16D7F;
 }
 
+@media (max-width: 767px) {
+  .navlist-none-mob {
+    display: none;
+  }
+}
+
 /* promo - розовый блок на главной странице */
 .promo {
   background-color: #f1e4e6;
@@ -988,6 +994,13 @@ body {
   padding: 24px 0;
 }
 
+@media (max-width: 767px) {
+  .footer {
+    padding-top: 43px;
+    padding-bottom: 9px;
+  }
+}
+
 .footer-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -995,6 +1008,15 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .footer-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 .footer-copy {
@@ -1005,11 +1027,24 @@ body {
   color: #FBFBFB;
 }
 
+@media (max-width: 767px) {
+  .footer-copy {
+    text-align: center;
+  }
+}
+
 /*ССылки на соцсети*/
 .footer-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 767px) {
+  .footer-links {
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
 }
 
 .footer-ic-li {
@@ -1041,12 +1076,6 @@ body {
 .footer-social-link:hover {
   color: #fff;
   background-color: #F16D7F;
-}
-
-@media (max-width: 767px) {
-  .navlist-none-mob {
-    display: none;
-  }
 }
 
 /* Промо-мини на всех страницах, кроме главной, розовый блок */
