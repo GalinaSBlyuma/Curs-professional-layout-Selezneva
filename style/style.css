@@ -732,6 +732,28 @@ body {
   gap: 30px;
 }
 
+@media (max-width: 1200px) {
+  .aside-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 360px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .aside-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 347px;
+    margin: 0 auto;
+  }
+}
+
 /*.aside-part {
   контейнеры для преиуществ. выстраивались флексами
   }*/
