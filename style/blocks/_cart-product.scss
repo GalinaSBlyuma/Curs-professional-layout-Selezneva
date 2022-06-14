@@ -4,6 +4,11 @@
   @include flexbox(space-between,flex-start);
 }
 
+.cart-cart-box {
+  display: block;
+  text-decoration: none;
+}
+
 .cart-product {
   max-height: 306px;
   width: 652px;
@@ -48,19 +53,20 @@
 }
 
 .cart-product-quantity {
+  width: 55px;
   margin-left: 24px;  
   border: 1px solid #EAEAEA;
-  padding: 0 16px;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   color: #656565;
+  text-align: center;
 }
 
 // Крестик на карточке
 .cart-product-cross {
-  margin-top: 28px;
-  margin-left: 57px;
+  margin-top: 12px;
+  margin-left: 38px;
   fill: #575757;
   @include all-button();
   
